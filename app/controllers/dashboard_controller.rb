@@ -48,7 +48,7 @@ class DashboardController < ApplicationController
   private
 
   def params_banner
-    params.require(:banner).permit(:title, :banner)
+    params.require(:banner).permit(:banner)
   end
 
   def params_service

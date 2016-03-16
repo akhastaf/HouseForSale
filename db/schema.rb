@@ -13,19 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20160315173634) do
 
-  create_table "banner_translations", force: :cascade do |t|
-    t.integer  "banner_id",  null: false
-    t.string   "locale",     null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "title"
-  end
-
-  add_index "banner_translations", ["banner_id"], name: "index_banner_translations_on_banner_id"
-  add_index "banner_translations", ["locale"], name: "index_banner_translations_on_locale"
 
   create_table "banners", force: :cascade do |t|
-    t.string   "title"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.string   "banner_file_name"
@@ -39,17 +28,6 @@ ActiveRecord::Schema.define(version: 20160315173634) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "galleries", force: :cascade do |t|
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.integer  "house_id"
-  end
-
-  add_index "galleries", ["house_id"], name: "index_galleries_on_house_id"
 
   create_table "house_translations", force: :cascade do |t|
     t.integer  "house_id",    null: false
