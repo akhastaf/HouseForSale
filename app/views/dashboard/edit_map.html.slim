@@ -1,0 +1,14 @@
+= render "header"
+section.wrapper-skinny.add-house.cf
+  h1 = t "dashboard.editMap.title"
+  =simple_form_for @map, url: {action: "update_map"}, method: :post do |f|
+    #map
+    =f.input :lat, id: 'map_lat', :as => :hidden
+    =f.input :lng, id: 'map_lng', :as => :hidden
+    =f.button :button, t("dashboard.editMap.save"), type: "submit", class: "btn"
+  =link_to t("dashboard.editMap.back"), services_path, class: "link"
+  javascript:
+    $(document).ready(function(){
+      var map = #{raw @map.to_json}
+      gmap_form(map);    // form map for edit view (print marker and possibility of put newer)
+    });

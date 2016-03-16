@@ -1,0 +1,11 @@
+= render "header"
+section.wrapper-wide.services#services
+  h1 = t "dashboard.services.title"
+  .row
+    -@services.each do |service|
+      .colum
+        =image_tag service.service.url(:medium)
+        h2.title = service.title
+        p.description =service.description
+        =link_to t("dashboard.services.back"), root_path, class: "link"
+        =link_to t("dashboard.services.edit"), service_path(service.id), class: "link"

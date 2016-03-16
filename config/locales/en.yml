@@ -1,0 +1,169 @@
+en:
+  lang: "en"
+  contact:
+    new:
+      title: "Contact"
+      emailplaceholder: "Email"
+      nameplaceholder: "Name"
+      messageplaceholder: "Message"
+      sendmessage: "Send Message"
+
+    create:
+      title: "Contact me"
+      subtitle: "Thank you for your message"
+      message: "I'll get back to you soon"
+      error: "Cannot send message."
+
+  dashboard:
+    header:
+      mainnav:
+        home: "Home"
+        dashboard: "Dashboard"
+        houses: "Houses"
+        logout: "Log Out"
+        contact: "Contact"
+      banner:
+        title: "Welcom Back"
+      subnav:
+        addhouse: "Add House"
+        banner: "Banner"
+        services: "Services"
+        location: "Location"
+    changeBanner:
+      title: "Change Banner"
+      titleplaceholder: "Title"
+      bannerlabel: "Choose photo"
+      hint: "min size 1500x800"
+      back: "Back"
+      save: "Save"
+    changeService:
+      title: "Change Service"
+      titleplaceholder: "Title"
+      servicelabel: "Choose photo"
+      descriptionplaceholder: "Description"
+      back: "Back"
+      save: "Save"
+    editMap:
+      title: "Change Location"
+      back: "Back"
+      save: "Save"
+    services:
+      title: "Services"
+      back: "Back"
+      edit: "Edit"
+    updateBanner:
+      successNotice: "Banner has been changed"
+      failedNotice: "Banner not changed"
+    updateService:
+      successNotice: "Service has been changed"
+      failedNotice: "Service not changed"
+    updateMap:
+      successNotice: "Location has been changed"
+      failedNotice: "Location not changed"
+
+  houses:
+    index:
+      title: "Houses"
+    form:
+      titleplaceholder: "Title"
+      priceplaceholder: "Price"
+      posterlabel: "Choose photo"
+      imagelabel: "Choose photos of gallery"
+      descriptionplaceholder: "Description"
+      save: "Save"
+    new:
+      title: "Add house"
+    edit:
+      title: "Edit house"
+    show:
+      header:
+        mainnav:
+          home: "Home"
+          dashboard: "Dashboard"
+          houses: "Houses"
+          logout: "Log Out"
+          contact: "Contact"
+      back: "Back"
+      edit: "Edit"
+      delete: "Delete"
+    create:
+      successNotice: "House adedd successfully"
+      failedNotice: "House not adedd"
+    update:
+      successNotice: "House updated"
+      failedNotice: "House not updated"
+    delete:
+      successNotice: "House deleted successflly"
+  layout:
+    title: "House For Sale"
+    footer:
+      languages:
+        title: "Language :"
+        en: "En"
+        ar: "Ar"
+      copyright: "All right reserver for Hose for Sale"
+
+  welcom:
+    index:
+      header:
+        mainnav:
+          home: "Home"
+          dashboard: "Dashboard"
+          ourservices: "Our Services"
+          houses: "Houses"
+          logout: "Log Out"
+          contact: "Contact"
+      ourservices:
+        title: "Our Services"
+      besthouses:
+        title: "Best Houses"
+      adress:
+        title: "Adress"
+
+  devise:
+    confirmation:
+      title: "Resend confirmation instructions"
+      emailplaceholder: "Email"
+      sendbutton: "Resend confirmation instructions"
+    password:
+      edit:
+        title: "Change your password"
+        passwordplaceholder: "New password"
+        passwordconfirmationplaceholder: "Confirm your new password"
+        sendbutton: "Change my password"
+      new:
+        title: "Forgot your password?"
+        emailplaceholder: "Email"
+        sendbutton: "Send"
+    registration:
+      new:
+        title: "Create account"
+        emailplaceholder: "Email"
+        passwordplaceholder: "Password"
+        passwordconfirmationplaceholder: "Confirm password"
+        passwordhint: "characters minimum"
+        sendbutton: "Create"
+      edit:
+        title: "Edit"
+        emailplaceholder: "Email"
+        p: "Currently waiting confirmation for:"
+        passwordplaceholder: "Password"
+        passwordconfirmationplaceholder: "Confirm password"
+        currentpasswordplaceholder: "Current password"
+        currentpasswordhint: "we need your current password to confirm your changes"
+        sendbutton: "Update"
+        subtitle: "Cancel my account"
+        subp: "Unhappy?"
+        back: "Back"
+    session:
+      new:
+        title: "Log in"
+        emailplaceholder: "Email"
+        passwordplaceholder: "Password"
+        sendbutton: "Log in"
+    links:
+      login: "Log in"
+      signup: "Sign up"
+      forgotpassword: "Forgot your password"
+      confirmationinstructions: "Didn't receive confirmation instructions?"
+      unlockinstrauctions: "Didn't receive unlock instructions?"

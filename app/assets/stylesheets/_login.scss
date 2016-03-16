@@ -1,0 +1,31 @@
+.banner {
+  background-image: image_url("banner-login.jpg");
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  h1 {
+    color: $highlight;
+    text-transform: uppercase;
+    font-size: 2.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 9rem;
+  }
+}
+.login {
+  text-align: center;
+  padding: 2rem 0;
+  input[type="email"], input[type="password"] {
+    text-align: center !important;
+  }
+  a {
+    text-decoration: none;
+    color: $dark;
+    font-size: 1rem;
+    font-weight: 700;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}

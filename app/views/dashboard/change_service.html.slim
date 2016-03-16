@@ -1,0 +1,9 @@
+= render "header"
+section.wrapper-skinny.add-house.cf
+  h1 = t "dashboard.changeService.title"
+  =simple_form_for @service, url: {action: "update_service"}, method: :post do |f|
+    =f.input :title, label: false, placeholder: t("dashboard.changeService.titleplaceholder")
+    =f.input :service, label: t("dashboard.changeService.servicelabel"), as: :file, input_html: { class: 'inputfile', id: "file"}
+    =f.input :description, label: false, placeholder: t("dashboard.changeService.descriptionplaceholder")
+    =f.button :button, t("dashboard.changeService.save"), type: "submit", class: "btn"
+  =link_to t("dashboard.changeService.back"), root_path, class: "link"

@@ -1,0 +1,10 @@
+= render "dashboard/header"
+
+section.wrapper-skinny.login
+  h1 Resend unlock instructions
+  = simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
+    = f.error_notification
+    = f.full_error :unlock_token
+    = f.input :email, label: false, placeholder: "Email", required: true, autofocus: true
+    = f.button :button, "Resend instructions", class: "btn", type: "submit"
+  = render "devise/shared/links"

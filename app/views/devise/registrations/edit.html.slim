@@ -1,0 +1,19 @@
+= render "dashboard/header"
+
+section.wrapper-skinny.login
+  h1 #{t("devise.registration.edit.title")} #{resource_name.to_s.humanize}
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+    = f.error_notification
+    = f.input :email, label: false, placeholder: t("devise.registration.edit.emailplaceholder"), required: true, autofocus: true
+    -if devise_mapping.confirmable? && resource.pending_reconfirmation?
+      p = t "devise.registration.edit.p"
+        = resource.unconfirmed_email
+    = f.input :password, label: false, placeholder: t("devise.registration.edit.passwordplaceholder"), autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false
+    = f.input :password_confirmation, label: false, placeholder: t("devise.registration.edit.passwordconfirmationplaceholder"), required: false
+    = f.input :current_password, label: false, placeholder: t("devise.registration.edit.currentpasswordplaceholder"), hint: t("devise.registration.edit.currentpasswordhint"), required: true
+    = f.button :button, t("devise.registration.edit.sendbutton"), class: "btn", type: "submit"
+  h2 = t "devise.registration.edit.subtitle"
+  p = t "devise.registration.edit.subp"
+    #{link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+
+  = link_to t("devise.registration.edit.back"), :back

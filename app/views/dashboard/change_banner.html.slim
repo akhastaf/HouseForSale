@@ -1,0 +1,8 @@
+= render "header"
+section.wrapper-skinny.add-house.cf
+  h1 = t "dashboard.changeBanner.title"
+  =simple_form_for @banner, url: {action: "update_banner"}, method: :post do |f|
+    =f.input :title, label: false, placeholder: t("dashboard.changeBanner.titleplaceholder")
+    =f.input :banner, label: t("dashboard.changeBanner.bannerlabel"), as: :file, hint: t("dashboard.changeBanner.hint"), input_html: { class: 'inputfile', id: "file"}
+    =f.button :button, t("dashboard.changeBanner.save"), type: "submit", class: "btn"
+  =link_to t("dashboard.changeBanner.back"), root_path, class: "link"

@@ -1,0 +1,39 @@
+doctype html
+html lang="#{t("lang")}"
+  head
+    title = t "layout.title"
+    meta charset="utf-8"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    script src="//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="
+    script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"
+  
+  body class="#{t("lang")}"
+    .flash-message
+      = js extend_gritter :fade_in_speed => "slow", :fade_out_speed => 2500, :time => 8000, :position => "top_right"
+      - if flash[:notice]
+        = js add_gritter(flash[:notice], :image => :success, :nodom_wrap  => true)
+      - elsif flash[:error]
+        = js add_gritter(flash[:error], :image => :error, :title => "Error", :nodom_wrap  => true)
+      
+    = yield
+
+    footer.wrapper-wide.cf
+      =link_to root_path, class: "logo" do
+        |House
+        span For
+        |Sale
+      .languages
+        h3 = t "layout.footer.languages.title"
+        = link_to_unless_current t("layout.footer.languages.en"), locale: "en"
+        |
+        = link_to_unless_current t("layout.footer.languages.ar"), locale: "ar"
+
+      p = t "layout.footer.copyright"
+      =link_to "#" do
+        i.fa.fa-facebook
+      =link_to "#" do  
+        i.fa.fa-twitter
+      =link_to "#" do
+        i.fa.fa-google-plus

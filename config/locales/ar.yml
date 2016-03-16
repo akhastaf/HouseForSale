@@ -1,0 +1,171 @@
+ar:
+  lang: "ar"
+  will_paginate:
+    next_label: "التالي"
+    previous_label: "السابق"
+  contact:
+    new:
+      title: "إتصل بنا"
+      emailplaceholder: "البريد الإلكتروني"
+      nameplaceholder: "الإسم"
+      messageplaceholder: "الرسالة"
+      sendmessage: "إرسال الرسالة"
+    create:
+      title: "إتصل بنا"
+      subtitle: "شكرا على مراسلتنا"
+      message: "سوف نجيبك في أقرب وقت"
+      error: "خطأ لا يمكن إرسال الرسالة"
+
+  dashboard:
+    header:
+      mainnav:
+        home: " الرئيسية"
+        dashboard: " لوحة التحكم "
+        houses: "المنازل "
+        logout: "تسجيل الخروج "
+        contact: "إتصل بنا"
+      banner:
+        title: "مرحبا بعودتك"
+      subnav:
+        addhouse: " إضافة منزل "
+        banner: " بانر "
+        services: "الخدمات"
+        location: " الموقع الجغرافي"
+    changeBanner:
+      title: "تعديل البانر"
+      titleplaceholder: "العنوان"
+      bannerlabel: "إختر صورة"
+      hint: "أقل حجم لصورة 1500x800"
+      back: "الرجوع"
+      save: "حفظ"
+    changeService:
+      title: "تعديل الخدمة"
+      titleplaceholder: "العنوان"
+      servicelabel: "إختر صورة"
+      descriptionplaceholder: "الوصف"
+      back: "الرجوع"
+      save: "حفظ"
+    editMap:
+      title: "تعديل الموقع الجغرافي"
+      back: "الرجوع"
+      save: "حفظ"
+    services:
+      title: "الخدمات"
+      back: "الرجوع "
+      edit: "تعديل "
+    updateBanner:
+      successNotice: "تم تعديل البانر بنجاح"
+      failedNotice: "لم يتم تعديل البانر"
+    updateService:
+      successNotice: "تم تعديل الخدمة"
+      failedNotice: "لم يتم تعديل الخدمة بنجاح"
+    updateMap:
+      successNotice: "تم تعديل الموقع الجغرافي بنجاح"
+      failedNotice: "لم يتم تعديل الموقع الجغرافي"
+
+  houses:
+    index:
+      title: "المنازل"
+    form:
+      titleplaceholder: "العنوان"
+      priceplaceholder: "الثمن"
+      posterlabel: "إختر صورة"
+      imagelabel: "إختر الصور"
+      descriptionplaceholder: "الوصف"
+      save: "حفظ"
+    new:
+      title: "إضافة منزل"
+    edit:
+      title: "تعديل المنزل"
+    show:
+      header:
+        mainnav:
+          home: " الرئيسية "
+          dashboard: " لوحة التحكم "
+          houses: " المنازل "
+          logout: " تسجيل الخروج "
+          contact: " إتصل بنا "
+      back: "الرجوع "
+      edit: "تعديل "
+      delete: "مسح "
+    create:
+      successNotice: "تم إضافة المنزل بنجاح"
+      failedNotice: "لم يتم إضافة المنزل"
+    update:
+      successNotice: "تم تعديل المنزل بنجاح"
+      failedNotice: "لم يتم تعديل المنزل"
+    delete:
+      successNotice: "تم مسح المنزل بنجاح"
+  layout:
+    title: "House For Sale"
+    footer:
+      languages:
+        title: "اللغة"
+        en: "الإنجليزية"
+        ar: "العربية"
+      copyright: "جميع الحقوق محفوظة"
+
+  welcom:
+    index:
+      header:
+        mainnav:
+          home: " الرئيسية "
+          dashboard: " لوحة التحكم "
+          ourservices: " خدماتنا "
+          houses: "المنازل "
+          logout: " تسجيل الخروج"
+          contact: " إتصل بنا "
+      ourservices:
+        title: "خدماتنا"
+      besthouses:
+        title: "أفضل المنازل"
+      adress:
+        title: "الموقع الجغرافي"
+
+  devise:
+    confirmation:
+      title: "إعادة إرسال تعليمات التفعيل"
+      emailplaceholder: "البريد الإلكتروني"
+      sendbutton: "إعادة إرسال تعليمات التفعيل"
+    password:
+      edit:
+        title: "تعديل كلمة المرور"
+        passwordplaceholder: "كلمة مرور جديدة"
+        passwordconfirmationplaceholder: "تأكيد كلمة المرور الجديدة"
+        sendbutton: "تعديل كلمة المرور"
+      new:
+        title: "هل نسيت كلمة المرور"
+        emailplaceholder: "البريد الإلكتروني"
+        sendbutton: "إرسال"
+    registration:
+      new:
+        title: "تسجيل حساب جديد"
+        emailplaceholder: "البريد الإلكتروني"
+        passwordplaceholder: "كلمة المرور"
+        passwordconfirmationplaceholder: "تأكيد كلمة المرور"
+        passwordhint: "الرموز "
+        sendbutton: "إنشاء"
+      edit:
+        title: "تعديل"
+        emailplaceholder: "البريد الإلكتروني"
+        p: "Currently waiting confirmation for:"
+        passwordplaceholder: "كلمة المرور"
+        passwordconfirmationplaceholder: "تأكيد كلمة المرور"
+        currentpasswordplaceholder: "كلمة المرور الحالية"
+        currentpasswordhint: "نحتاج كلمة المرور الحالية لحفظ تعديلات"
+        sendbutton: "تعديل"
+        subtitle: "إلغاء الحساب"
+        subp: "غير سعيد"
+        back: "رجوع"
+    session:
+      new:
+        title: "دخول"
+        emailplaceholder: "البريد الإلكتروني"
+        passwordplaceholder: "كلمة المرور"
+        sendbutton: "تسجيل الدخول"
+    links:
+      login: "تسجيل الدخول"
+      signup: "إنشاء حساب"
+      forgotpassword: "هل نسيت كلمة المرور"
+      confirmationinstructions: "Didn't receive confirmation instructions?"
+      unlockinstrauctions: "Didn't receive unlock instructions?"

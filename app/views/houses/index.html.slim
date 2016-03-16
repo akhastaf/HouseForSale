@@ -1,0 +1,13 @@
+= render "dashboard/header"
+section.wrapper-wide.houses
+  h1 = t "houses.index.title"
+  - @houses.in_groups_of(3, false).each do |group|
+      .row
+        - group.each do |house|
+          .colum
+            =link_to house do
+              =image_tag house.poster.url(:medium)
+            br
+            h2.title =link_to house.title, house
+            h2.price =house.price
+  = will_paginate @houses

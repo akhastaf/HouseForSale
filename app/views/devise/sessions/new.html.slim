@@ -1,0 +1,11 @@
+= render "dashboard/header"
+
+section.wrapper-skinny.login
+  h1 = t "devise.session.new.title"
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = f.input :email, label: false, required: false, autofocus: true, placeholder: t("devise.session.new.emailplaceholder"), autocomplte: false
+    = f.input :password, label: false, required: false, placeholder: t("devise.session.new.passwordplaceholder")
+    //= f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    = f.button :button, t("devise.session.new.sendbutton"), type: "submit", class: "btn"
+
+  = render "devise/shared/links"

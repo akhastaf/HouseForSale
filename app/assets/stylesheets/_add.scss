@@ -1,0 +1,24 @@
+.sub-nav {
+  margin: 1.5rem auto !important;
+  float: none;
+  text-align: center;
+  border-bottom: 2px solid $dark;
+  padding-bottom: 2rem;
+}
+.add-house {
+  text-align: center;
+  padding: 2rem 0;
+  h1 {
+    padding-bottom: 2rem;
+  }
+}
+
+.add-photo {
+  text-decoration: none;
+  color: $dark;
+  font-size: 1rem;
+  font-weight: 700;
+  &:hover {
+    color: $highlight;
+  }
+}

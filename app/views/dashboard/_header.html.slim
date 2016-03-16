@@ -1,0 +1,25 @@
+section
+  header.wrapper-wide.cf
+    =link_to root_path, class: "logo" do
+      |House
+      span For
+      |Sale
+    nav.main-nav
+      =link_to t("dashboard.header.mainnav.home"), root_path
+      -if user_signed_in?
+        =link_to t("dashboard.header.mainnav.dashboard"), services_path
+        =link_to t("dashboard.header.mainnav.houses"), houses_path
+        =link_to t("dashboard.header.mainnav.logout"), destroy_user_session_path, method: "delete"
+      -else
+        =link_to t("dashboard.header.mainnav.houses"), houses_path
+        =link_to t("dashboard.header.mainnav.contact"), new_contact_path
+        
+  .banner.cf
+    .wrapper-skinny
+      h1 = t "dashboard.header.banner.title"
+  -if user_signed_in?
+    nav.main-nav.sub-nav.wrapper-skinny
+      =link_to t("dashboard.header.subnav.addhouse"), new_house_path
+      =link_to t("dashboard.header.subnav.banner"), banner_path
+      =link_to t("dashboard.header.subnav.services"), services_path
+      =link_to t("dashboard.header.subnav.location"), map_path

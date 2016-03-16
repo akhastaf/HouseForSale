@@ -1,0 +1,9 @@
+= render "dashboard/header"
+section.wrapper-skinny.contact
+  h1 = t "contact.new.title"
+  = simple_form_for @contact do |f|
+    =f.input :email, label: false, placeholder: t("contact.new.emailplaceholder"), required: true
+    =f.input :name, label: false, placeholder: t("contact.new.nameplaceholder"), required: true
+    =f.input :message, label: false, placeholder: t("contact.new.messageplaceholder"), as: :text, required: true
+    =f.input :nikename, label: false, hint: "leave this filed blank", wrapper_html: { class: 'hidden' }
+    =f.button :button, t("contact.new.sendmessage"), type: "submit", class: "btn"

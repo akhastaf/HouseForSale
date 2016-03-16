@@ -1,0 +1,49 @@
+section
+  header.wrapper-wide.cf
+    =link_to root_path, class: "logo" do
+      |House
+      span For
+      |Sale
+    nav.main-nav
+      =link_to t("welcom.index.header.mainnav.home"), root_path
+      -if user_signed_in?
+        =link_to t("welcom.index.header.mainnav.dashboard"), services_path
+        =link_to t("welcom.index.header.mainnav.houses"), houses_path
+        =link_to t("welcom.index.header.mainnav.logout"), destroy_user_session_path, method: "delete"
+      -else
+        =link_to t("welcom.index.header.mainnav.ourservices"), root_path + "#services"
+        =link_to t("welcom.index.header.mainnav.houses"), houses_path
+        =link_to t("welcom.index.header.mainnav.contact"), new_contact_path
+  .bg.cf style="background-image: url(#{@banner.banner.url(:medium)});"
+    .wrapper-skinny
+      h1 =@banner.title
+    
+section.wrapper-wide.cf.services
+  h1 = t "welcom.index.ourservices.title"
+  .row
+    -@services.each do |service|
+      .colum
+        =image_tag service.service.url(:medium)
+        h2.title = service.title
+        p.description =service.description
+        
+
+section.wrapper-wide.houses
+  h1 = t "welcom.index.besthouses.title"
+  - @houses.in_groups_of(3, false).each do |group|
+    .row
+      - group.each do |house|
+        .colum
+          =image_tag house.poster.url(:medium)
+          br
+          h2.title =link_to house.title, house
+          h2.price =house.price
+    
+section.wrapper-wide#adress
+  h1 = t "welcom.index.adress.title"
+  #map
+  javascript:
+    $(document).ready(function(){
+      var map = #{raw @map.to_json}    // pass ruby variable to javascript
+      gmap_show(map);    // init show map for company card (only print marker)
+    });

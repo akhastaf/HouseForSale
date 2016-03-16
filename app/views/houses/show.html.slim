@@ -1,0 +1,37 @@
+header.wrapper-wide.cf.show-nav
+  =link_to root_path, class: "logo" do
+    |House
+    span For
+    |Sale
+  nav.main-nav
+    =link_to t("houses.show.header.mainnav.home"), root_path
+    -if user_signed_in?
+      =link_to t("houses.show.header.mainnav.dashboard"), services_path
+      =link_to t("houses.show.header.mainnav.houses"), houses_path
+      =link_to t("houses.show.header.mainnav.logout"), destroy_user_session_path, method: "delete"
+    -else
+      =link_to t("houses.show.header.mainnav.houses"), houses_path
+      =link_to t("houses.show.header.mainnav.contact"), new_contact_path
+    
+
+section.wrapper-wide.show
+  = nivo_slider id: "slider" do
+    =image_tag("banner.jpg", id: "1")
+    =image_tag("banner-login.jpg", id: "2")
+    =image_tag("banner.jpg", id: "3")
+      
+  .content.wrapper-skinny.cf
+    h1.title =@house.title
+    h1.price =@house.price
+    p.description
+      = @house.description
+    .links
+      =link_to t("houses.show.back"), houses_path, class: "link"
+      - if user_signed_in?
+        =link_to t("houses.show.edit"), edit_house_path(@house), class: "link"
+        =link_to t("houses.show.delete"), @house, method: "delete", data: {confirm: "are you sure to delete house #{@house.title}"}, class: "link"
+        
+javascript:
+  $(window).load(function() {
+    $('#slider').nivoSlider();
+  });

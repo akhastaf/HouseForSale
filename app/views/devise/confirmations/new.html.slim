@@ -1,0 +1,11 @@
+= render "dashboard/header"
+
+section.wrapper-skinny.login
+  h1 = t "devise.confirmation.title"
+  = simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+    = f.error_notification
+    = f.full_error :confirmation_token
+    = f.input :email, label: false, placeholder: t("devise.confirmation.emailplaceholder"), required: true, autofocus: true
+    = f.button :button, t("devise.confirmation.sendbutton"), class: "btn", type: "submit"
+  
+  = render "devise/shared/links"
