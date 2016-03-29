@@ -49,7 +49,7 @@ class HousesController < ApplicationController
   end
 
   def params_house
-    params.require(:house).permit(:title, :price, :description, :poster, images_attributes: [:image, :id, :_destroy])
+    params.require(:house).permit(:title, :price, :description, :poster, images_attributes: [:id, :image, :_destroy])
   end
 
 end

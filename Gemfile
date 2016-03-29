@@ -51,7 +51,7 @@ gem 'gmaps4rails', '~> 2.1', '>= 2.1.2'
 # jquery file upload
 #gem 'jquery-fileupload-rails'
 # cocoon
-#gem 'cocoon', '~> 1.2', '>= 1.2.8'
+gem 'cocoon', '~> 1.2', '>= 1.2.8'
 # nivo slide
 gem 'nivo-rails', '~> 0.0.1'
 # mini magick

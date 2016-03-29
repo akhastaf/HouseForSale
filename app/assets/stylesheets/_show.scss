@@ -3,6 +3,27 @@
   padding-bottom: 1.5rem;
 }
 
+.ar {
+  .show {
+    .title {
+      float: right;
+    }
+    .price {
+      float: left;
+    }
+  }
+}
+.en {
+  .show {
+    .title {
+      float: left;
+    }
+    .price {
+      float: right;
+    }
+  }
+}
+
 .show {
   margin-bottom: 2rem;
   #slider {
@@ -12,7 +33,6 @@
     margin-bottom: 2rem;
   }
   .title {
-    float: left;
     display: inline-bock;
   }
   .price {

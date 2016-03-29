@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require underscore
+//= require cocoon
 //= require gmaps/google
 //= require nivo
 //= require gritter

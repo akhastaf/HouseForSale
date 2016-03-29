@@ -97,10 +97,14 @@ header {
   text-align: center;
   padding: 2rem 0;
   border-bottom: 2px solid $dark;
-  img {
-    height: 100%;
-    width: 200px;
-    border-radius: 50%;
+  .row {
+    .colum {
+      img {
+        height: 100%;
+        width: 200px;
+        border-radius: 50%;
+      }
+    }
   }
 }
 

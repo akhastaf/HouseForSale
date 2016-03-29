@@ -2,6 +2,11 @@
   =f.input :title, label: false, placeholder: t("houses.form.titleplaceholder")
   =f.input :price, label: false, placeholder: t("houses.form.priceplaceholder")
   =f.input :poster, label: t("houses.form.posterlabel"), as: :file, input_html: { class: 'inputfile', id: "file"}
+  //= f.simple_fields_for :images, Image.new do |img|
+      //= render 'image_fields', f: img
+      //.links
+      //= link_to_add_association 'add image', f, :images
+  
   = f.simple_fields_for :images do |img|
     =img.input :image, multiple: true, label: t("houses.form.imagelabel"), input_html: { class: 'inputfile', id: "file"}
   =f.input :description, label: false, placeholder: t("houses.form.descriptionplaceholder")

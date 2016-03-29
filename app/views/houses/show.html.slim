@@ -16,9 +16,9 @@ header.wrapper-wide.cf.show-nav
 
 section.wrapper-wide.show
   = nivo_slider id: "slider" do
-    =image_tag("banner.jpg", id: "1")
-    =image_tag("banner-login.jpg", id: "2")
-    =image_tag("banner.jpg", id: "3")
+    = image_tag @house.poster.url(:large)
+    - @house.images.each do |img|
+      =image_tag img.image.url
       
   .content.wrapper-skinny.cf
     h1.title =@house.title

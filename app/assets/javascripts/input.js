@@ -3,6 +3,9 @@ $(document).ready(function (){
     var $input = $(this);
     var $label = $input.prev('label');
     var $labelVal = $label.html();
+    var $value = $label.html();
+    $label.html(' ');
+    $label.append('<span>'+ $value +'</span>');
 
     $input.on('change', function (e){
       var $fileName = '';
